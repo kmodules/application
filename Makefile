@@ -276,7 +276,7 @@ generate-resources: $(TOOLBIN)/kustomize
 generate-go: $(TOOLBIN)/controller-gen $(TOOLBIN)/conversion-gen  $(TOOLBIN)/mockgen
 	go generate ./api/... ./controllers/...
 	$(TOOLBIN)/controller-gen \
-		paths=./api/v1beta1/... \
+		paths=./api/app/v1beta1/... \
 		object:headerFile=./hack/boilerplate.go.txt
 
 ## --------------------------------------

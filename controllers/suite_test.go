@@ -18,7 +18,7 @@ import (
 
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
-	appv1beta1 "sigs.k8s.io/application/api/v1beta1"
+	appv1beta1 "sigs.k8s.io/application/api/app/v1beta1"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/envtest"

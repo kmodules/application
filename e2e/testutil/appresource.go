@@ -13,7 +13,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/json"
 	"k8s.io/apimachinery/pkg/util/yaml"
-	applicationsv1beta1 "sigs.k8s.io/application/api/v1beta1"
+	applicationsv1beta1 "sigs.k8s.io/application/api/app/v1beta1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
