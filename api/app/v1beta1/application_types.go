@@ -295,6 +295,8 @@ const (
 	Failed = "Failed"
 )
 
+// +genclient
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // +kubebuilder:object:root=true
 // +kubebuilder:resource:categories=all,shortName=app
 // +kubebuilder:subresource:status
@@ -313,6 +315,7 @@ type Application struct {
 	Status ApplicationStatus `json:"status,omitempty"`
 }
 
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // +kubebuilder:object:root=true
 
 // ApplicationList contains a list of Application
