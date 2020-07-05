@@ -263,6 +263,9 @@ manifests: $(TOOLBIN)/controller-gen
 		kubectl annotate --overwrite -f $$f --local=true -o yaml api-approved.kubernetes.io=https://github.com/kubernetes-sigs/application/pull/2 > $$f.bk; \
 		mv $$f.bk $$f; \
 	done
+	cd config/crd/bases; \
+		go-bindata -mode=0644 -modtime=1573722179 -o bindata.go -pkg v1beta1 .; \
+		mv bindata.go ../../../api/app/v1beta1/
 
 .PHONY: generate-resources
 generate-resources: $(TOOLBIN)/kustomize
